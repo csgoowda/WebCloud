@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard - WebCloud</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadUser()">
+  <div class="nav">
+    <h2>WebCloud</h2>
+  </div>
+
+  <div class="profile-card">
+    <div class="profile-avatar-wrap">
+      <img id="preview" src="" alt="Profile Photo" class="profile-avatar">
+      <label for="profilePic" class="change-photo-btn">Change Photo</label>
+      <input type="file" id="profilePic" onchange="uploadProfilePic()" style="display:none;">
+    </div>
+    <div class="profile-username" id="userInfo"></div>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
+
+  <div class="upload-section">
+    <h3>Upload File</h3>
+    <input type="file" id="fileInput"><br>
+    <button onclick="uploadFile()">Upload</button>
+
+    <h3>Your Files</h3>
+    <ul id="fileList"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
